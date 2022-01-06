@@ -1,7 +1,7 @@
 <h1> Dokumentacja wykonania projektu </h1> <br/>
       <p>
         <h3>Opis aplikacji</h3> 
-        Niniejsza aplikacja powstala w celu prezentacji mozliwosci budowy aplikacji za pomoca wykorzystania mikroserwisow bedacych konteneremi Dockera. Aplikacja dziala w wersji deweloperskiej. Zadaniem aplikacji jest obliczanie wartosci ciagu Fibonacciego. Uzytkownik wpisuje wartosc indeksu (od 1 do 20) dla ktorego ma zostac obliczona wartosc ciagu Fibonacciego. Aplikacja zapisuje juz obliczone wartosci, a takze oferuje zapis histori wprowadzanych argumentow. </p>
+        Niniejsza aplikacja powstala w celu prezentacji mozliwosci budowy aplikacji za pomoca wykorzystania mikroserwisow bedacych konteneremi Dockera. Aplikacja dziala w wersji deweloperskiej, wiec zmiany wprowadzone w plikach zrodlowych aplikacji sa natychmiast widoczne w serwisie. Zadaniem aplikacji jest obliczanie wartosci ciagu Fibonacciego. Uzytkownik wpisuje wartosc indeksu (od 1 do 20, przedzial obustronnie domkniety) dla ktorego ma zostac obliczona wartosc ciagu Fibonacciego. Aplikacja zapisuje juz obliczone wartosci, a takze oferuje zapis historii wprowadzanych argumentow. </p>
 <img src = "./client/public/diagram.png">       
        
 <p>
@@ -21,13 +21,13 @@
          <ul>
            <li><b>Ngnix</b> - Pelni funkcje proxy. Pierwszy element aplikacji na drodze komunikacji z przegladarka internetowa uzytkownika.</li>
            <li><b>React Server</b> - Odpowiada za tworzenie interfejsu uzytkownika i sama strukture serwisu. </li>
-           <li><b>Express Server</b> - Pelni funkcje API umozliwiajacego kontakt z serwisami Postgres oraz Redis</li>
+           <li><b>Express Server</b> - Pelni funkcje API umozliwiajacego kontakt z serwisami Postgres oraz Redis.</li>
            <li><b>Postgres</b> - Baza danych zawierajaca dane o historii wprowadzanych indeksow.</li>
-           <li><b>Redis</b> - Przechowuje wyniki obliczen do wyswietlenia w postaci par klucz - wartosc</li>
-           <li><b>Worker</b> - Nadzoruje oraz przeprowadza operacje na elementach ciagu Fibonacciego na rzecz kontenera Redis</li>
+           <li><b>Redis</b> - Przechowuje wyniki obliczen do wyswietlenia w postaci par klucz - wartosc.</li>
+           <li><b>Worker</b> - Nadzoruje oraz przeprowadza operacje na elementach ciagu Fibonacciego na rzecz kontenera Redis.</li>
                       </ul></p>
       <p>
-        <h3>Zmiany wzgledem laboratiorum 9</h3>  
+        <h3>Zmiany wzgledem laboratorium 9</h3>  
     Aplikacja zostala stworzona na podstawie kodu zrodlowego z laboratorium nr 9. W celu realizacji zadania dokonano nastepujacych zmian w kodzie aplikacji:
 <ul>
         <li>W pliku package.json dla kontenera React Server ustawiono skrypt startowy jako  "start": "react-scripts --openssl-legacy-provider start"
@@ -45,6 +45,6 @@
 <li>Poprawiono plik Fib.js. W poprzedniej wersji pliku indeksy oraz wartosci wyswietlaly sie dopiero po recznym odswiezeniu strony przez uzytkownika. Po poprawkach nie jest konieczne przeladowanie strony przez uzytkownika, wykonanie obliczen takze odbywa sie bez koniecznosci przeladowania strony przez przegladarke.</li>
 <li>Stworzono plik Home.js ze strona startowa serwisu.</li>
 <li>Stworzono plik Documentation.js wraz z plikami graficznymi dla kontenera React Server. Plik Documentation.js zawiera sprawozdanie z realizacji projektu.</li>
-<li>Dodano kilka zasad CSS (plik App.css) w celu przerzystego wyswietlania strony. Zrezygnowano z domyslnego motywu Reacta poniewaz wyswietlal sie on w sposob niepoprawny z elementami serwisu. </li>
+<li>Dodano kilka zasad CSS (plik App.css) w celu przejrzystego wyswietlania strony. Zrezygnowano z domyslnego motywu Reacta poniewaz wyswietlal sie on w sposob niepoprawny z elementami serwisu. </li>
 </ul>
 </p>
