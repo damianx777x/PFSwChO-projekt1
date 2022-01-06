@@ -37,6 +37,7 @@ class Fib extends Component {
     await axios.post('/api/values', {
       index: this.state.index,
     });
+    this.setState({answear:'Poprawnie obliczono wartosc'})
     this.setState({ index: '' });
     await this.fetchValues();
   }
@@ -84,22 +85,26 @@ class Fib extends Component {
             value={this.state.index}
             onChange={(event) => this.setState({ index: event.target.value })}
           />
-          
+          <br/>
           <button type="submit">Oblicz</button>
         </form>
         {this.renderAnswear()}
-        <form onSubmit={this.handleHistory}> 
-        <button type="submit"  >Historia</button>
-        </form>
-
+        
         
 
-        <h3>Indexes I have seen:</h3>
+        <br/>
+        <form onSubmit={this.handleHistory}> 
+        <button type="submit"  >Wyswietl wpisywane indeksy:</button>
+        </form>
+        <br/>
         {this.renderSeenIndexes()}
+
 
         <h3>Obliczone elementy ciagu Fibonacciego:</h3>
         {this.renderValues()}
+        <footer> Politechnika Lubelska 2022 </footer>
       </div>
+      
     );
   }
 }

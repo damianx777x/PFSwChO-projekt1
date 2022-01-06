@@ -8,13 +8,15 @@ import Fib from './Fib';
 function App() {
   return (
     <Router>
-      <div c>
+      <div >
         <header >
-          
-          <Link to="/">Strona glowna</Link>
-          <Link to="/fibonacci">Fibonacci</Link>
-          <Link to="/documentation">Dokumentacja</Link>
+          <ul>
+          <li><Link to="/">Strona glowna</Link></li>
+          <li> <Link to="/fibonacci">Fibonacci</Link></li>
+          <li><Link to="/documentation">Dokumentacja</Link></li>
+          </ul>
         </header>
+        <br/>
         <div>
           <Route exact path="/" component={Home} />
           <Route path="/fibonacci" component={Fib} />

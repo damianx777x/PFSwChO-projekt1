@@ -46,12 +46,6 @@ app.get("/values/all", async (req, res) => {
   res.send(values.rows);
 });
 
-app.get("/values/answear", async (req, res) => {
-  const values = await pgClient.query("SELECT * from values where ");
-
-  res.send(values.rows);
-});
-
 app.get("/values/current", async (req, res) => {
   redisClient.hgetall("values", (err, values) => {
     res.send(values);
