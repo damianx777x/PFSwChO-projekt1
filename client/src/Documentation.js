@@ -10,7 +10,15 @@ export default () => {
         <h3>Opis aplikacji</h3> 
         Niniejsza aplikacja powstala w celu prezentacji mozliwosci budowy aplikacji za pomoca wykorzystania mikroserwisow bedacych konteneremi Dockera. Aplikacja dziala w wersji deweloperskiej. Zadaniem aplikacji jest obliczanie wartosci ciagu Fibonacciego. Uzytkownik wpisuje wartosc indeksu (od 1 do 20) dla ktorego ma zostac obliczona wartosc ciagu Fibonacciego. Aplikacja zapisuje juz obliczone wartosci, a takze oferuje zapis histori wprowadzanych argumentow. </p>
       <img src={"./diagram.png"}/> <br/>
+       
+       <p>
+         <h3>Uruchomienie aplikacji</h3>
+         W celu uruchomienia aplikacji prosze pobrac pliki z repozytorium (np. za pomoca narzedzia git lub w formiacie zip i rozpakowac). Nastepnie w terminalu przejsc do folderu projektu i wydac polecenie "COMPOSE_HTTP_TIMEOUT=300 docker-compose up". Pierwsza czesc polecenia jest czasami konieczna ze wzgledu wolnego uruchamiania sie kontenera client_1. Ewentualnie nalezy uruchomic polecenie drugi raz. Serwis dostepny jest pod adresem localhost:3050. Ponizej zrzut ekranu potwierdzajacy uruchomienie aplikacji.
+       </p>
+       <img src={"./scr.png"}/> <br/>
+
        <p> 
+
          <h3>Architektura aplikacji</h3>
          Aplikacja sklada sie z nastepujacych kontenerow: 
          <ul>
